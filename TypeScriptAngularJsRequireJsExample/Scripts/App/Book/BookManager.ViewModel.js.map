@@ -1,0 +1,1 @@
+{"version":3,"file":"BookManager.ViewModel.js","sourceRoot":"","sources":["BookManager.ViewModel.ts"],"names":["BookManagerViewModel","BookManagerViewModel.constructor","Book","Book.constructor"],"mappings":";IAAA;QAAAA;QAMAC,CAACA;QAADD,2BAACA;IAADA,CAACA,AAND,IAMC;IANY,4BAAoB,uBAMhC,CAAA;IAED;QAAAE;QAIAC,CAACA;QAADD,WAACA;IAADA,CAACA,AAJD,IAIC;IAJY,YAAI,OAIhB,CAAA"}

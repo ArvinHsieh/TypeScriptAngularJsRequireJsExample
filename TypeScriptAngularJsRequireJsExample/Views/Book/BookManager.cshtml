@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "BookManager";
+}
+
+<h2>BookManager</h2>
+
+<div ng-controller="BookManagerCtrl">
+    <div id="controls">
+        <input type="button" id="btnQuery" value="查詢" ng-click="GetBooks()" auto-disabled ng-model="model.IsBlock" />
+        <input type="button" id="btnInsert" value="新增" ng-click="ChangeActionModel(1)" auto-disabled ng-model="model.IsBlock" />
+    </div>
+    <div id="listView" ng-if="model.ActionModel == 0" ng-cloak class="ng-cloak">
+        <table border="1">
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td></td>
+            </tr>
+            <tr ng-repeat="book in model.Books">
+                <td><span ng-bind="book.ID"></span></td>
+                <td><span ng-bind="book.BookName"></span></td>
+                <td><span ng-bind="book.BookAuthor"></span></td>
+                <td>
+                    <input type="button" id="btnEdit" value="修改" ng-click="ChangeActionModel(1, book)" auto-disabled ng-model="model.IsBlock" />
+                    <input type="button" id="btnDelete" value="刪除" ng-click="DeleteBook(book)" auto-disabled ng-model="model.IsBlock" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="editView" ng-if="model.ActionModel == 1" ng-cloak class="ng-cloak">
+        <input type="text" id="id" ng-model="model.EditModel.ID" placeholder="ID" /><br />
+        <input type="text" id="name" ng-model="model.EditModel.BookName" placeholder="BookName" /><br />
+        <input type="text" id="age" ng-model="model.EditModel.BookAuthor" placeholder="BookAuthor" /><br />
+        <input type="button" id="btnSave" value="儲存" ng-click="SaveBook()" auto-disabled ng-model="model.IsBlock" />
+        <input type="button" id="btnCancel" value="取消" ng-click="ChangeActionModel(0)" auto-disabled ng-model="model.IsBlock" />
+    </div>
+    <div ng-bind="model.Message"></div>
+</div>
+
+@section script {
+    <script>
+        RequireBootstrap("app/book/BookManager.Controller");
+    </script>
+}
