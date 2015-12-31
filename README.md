@@ -1,3 +1,2 @@
-# TypeScriptAngularJsRequireJsExample
-
-使用 TypeScript + AngularJs + RequireJs 整合範例。
+# TypeScript + AngularJs + RequireJs + ASP.NET Example
+Use TypeScript + AngularJs + RequireJs + ASP.NET MVC Quick Start
